@@ -17,4 +17,5 @@ angular.module('LunchCheck', [])
   }
 });
 
+MyLunchCheckController.$inject = ['$scope'];
 })();
