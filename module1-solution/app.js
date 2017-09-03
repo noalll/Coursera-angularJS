@@ -3,17 +3,14 @@
 
 angular.module('LunchCheck', [])
 
-.controller('LunchCheckController', function ($scope) {
-  $scope.lunchItems = [];
+.controller('LunchCheckController', function ($scope) {  
   $scope.itemsStr;
   $scope.resultMsg;
   $scope.itemValidator = function () {
     if ($scope.itemsStr == '' || $scope.itemsStr == undefined )
       $scope.resultMsg = "Please enter data first";
-    else {
-      $scope.lunchItems = $scope.itemsStr.split(',');
-      $scope.resultMsg = $scope.lunchItems.length <= 3 ? "Enjoy!" : "Too much!";
-    }
+    else
+      $scope.resultMsg = $scope.itemsStr.split(',').length <= 3 ? "Enjoy!" : "Too much!";
   }
 });
 
