@@ -3,10 +3,10 @@
 
 angular.module('LunchCheck', [])
 
-.controller('LunchCheckController', function ($scope) {  
+.controller('LunchCheckController', function ($scope) {
   $scope.itemsStr;
   $scope.resultMsg;
-  $scope.itemValidator = function () {
+  $scope.strValidator = function () {
     if ($scope.itemsStr == '' || $scope.itemsStr == undefined )
       $scope.resultMsg = "Please enter data first";
     else
